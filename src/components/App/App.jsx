@@ -8,22 +8,29 @@ import './App.module.css';
 
 class App extends Component {
   state = {
-    contacts: [
-      {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
-      {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
-    ],
+    contacts: [],
     filter: '',
-    name: '',
-    number: ''
+  }
+
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    if (contacts) {
+      this.setState({ contacts: JSON.parse(contacts) });
+    }
+  }
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
   }
 
   addContact = (name, number) => {
     const { contacts } = this.state;
-
-    const nameExists = contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase());
-
-    if (nameExists) {
-      alert(`Contact with the name "${name}" already exists.`);
+    const isDuplicate = contacts.some(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+    if (isDuplicate) {
+      alert(`${name} is already in contacts.`);
       return;
     }
 
