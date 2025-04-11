@@ -131,8 +131,10 @@ After refactoring, the root component of the application will look like this:
 </div>
 ```
 
-![Step 5](https://img.shields.io/badge/Step%205-purple?style=for-the-badge)
+## Step 5 
+
 Prevent the user from adding contacts whose names are already present in the phonebook. In case of an attempt to do so, display an alert with a warning.
 
-![Step 6](https://img.shields.io/badge/Step%206-purple?style=for-the-badge)
+## Step 6 
+
 Extend the application's functionality by allowing the user to delete previously saved contacts.
