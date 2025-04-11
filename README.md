@@ -1,22 +1,17 @@
-# ✨ Contact book, component life cycle methods ✨
+# Contact book, component life cycle methods 
 
 Added storing phonebook contacts in localStorage. Component life cycle methods used.
 
-## 🛠 Tools used
-
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,npm,webpack,vscode)](https://skillicons.dev)
-
-![Description](https://img.shields.io/badge/Description-purple?style=for-the-badge)
+## Description 
 > This homework task is a simple contact management application for a phonebook, designed to practice fundamental React concepts and state management. The application allows users to add, display, search, and delete contacts, with each contact consisting of a name and a phone number. The project is structured to progressively introduce new features, demonstrating the importance of component-based architecture, controlled components, and state handling in React.
 
-![Features](https://img.shields.io/badge/Features-purple?style=for-the-badge)
-
+## Features 
 - **Add Contacts**: Users can add contacts with a name and phone number. The application ensures that contact names adhere to a specific pattern and prevents the addition of duplicate names. 
 - **Search and Filter**: A search field is provided to filter contacts by name, with case-insensitive matching.
 - **Contact List Management**: Users can view a list of all contacts and remove any contact they no longer need.
 - **Component Refactoring**: The application is refactored from a single component into multiple independent components, enhancing modularity and readability.
 
-![Key Learning Objectives:](https://img.shields.io/badge/Key%20Learning%20Objectives-purple?style=for-the-badge)
+## Key Objectives:
 
 - **State Management**: Manage and update state in React, particularly how to structure state to store multiple properties and handle user inputs in a controlled manner.
 - **Componentization**: The importance of breaking down an application into smaller, reusable components became evident. This approach not only simplifies development but also makes the codebase easier to maintain and scale.
@@ -26,7 +21,7 @@ Added storing phonebook contacts in localStorage. Component life cycle methods u
 - **User Experience Considerations**: Enhancing the user experience by providing feedback (such as alerts) and ensuring the interface remains responsive and intuitive.
 This project served as a solid foundation for building more complex React applications, emphasizing the core principles of React and good development practices.
 
-![Step 1](https://img.shields.io/badge/Step%201-purple?style=for-the-badge)
+## Step 1 
 
 The application should include a form and a contact list. In the current step, implement the ability to add a contact name and display it in the contact list. The application does not need to save contacts between different sessions (page refreshes).
 
@@ -53,8 +48,7 @@ state = {
 
 Each contact should be an object with the properties `name` and `id`. To generate IDs, use any package intended for this task, such as nanoid.
 
-![Step 2](https://img.shields.io/badge/Step%202-purple?style=for-the-badge)
-
+## Step 2 
 Extend the application's functionality by allowing users to add phone numbers. To do this, add `<input type="tel">` to the form and a property to store the value in the state.
 
 ```js
@@ -77,8 +71,7 @@ Use the markup below (input) for the contact number.
 />
 ```
 
-![Step 3](https://img.shields.io/badge/Step%203-purple?style=for-the-badge)
-
+## Step 3 
 Add a search field that can be used to filter the contact list by name.
 
 The search field is an input whose value is saved in the state (controlled element).
@@ -111,8 +104,7 @@ state = {
 }
 ```
 
-![Step 4](https://img.shields.io/badge/Step%204-purple?style=for-the-badge)
-
+## Step 4 
 If your application is implemented in a single `<App>` component, refactor the code to separate the parts of the application into different independent components.
 
 Only the `contacts` and `filter` properties will remain in the root `<App>` component's state.
